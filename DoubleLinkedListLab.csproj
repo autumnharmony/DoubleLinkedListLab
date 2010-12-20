@@ -46,13 +46,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DLList.cs" />
+    <Compile Include="ConvertRoutine.cs" />
+    <Compile Include="CreateListDialog.cs" />
+    <Compile Include="CreateListDialog.Designer.cs">
+      <DependentUpon>CreateListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="List.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="ListManager.cs" />
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateListDialog.resx">
+      <DependentUpon>CreateListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

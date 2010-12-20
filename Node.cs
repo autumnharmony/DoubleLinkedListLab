@@ -1,58 +1,92 @@
-﻿/*
- * Created by SharpDevelop.
- * User: anton
- * Date: 15.12.2010
- * Time: 1:52
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
 using System;
 
 namespace DoubleLinkedListLab
 {
-	/// <summary>
-	/// Узел двунаправленного списка
-	/// </summary>
 	public class Node
-	{
-		Node next;
-		
-		public Node Next {
-			get { return next; }
-			set { next = value; }
-		}
-		
-		Node prev;
-		
-		public Node Prev {
-			get { return prev; }
-			set { prev = value; }
-		}
-		
-		int info;
-		
-		public int Info {
-			get { return info; }
-			set { info = value; }
-		}
-		
-		
-		
-		public Node()
+    {
+        int info;
+        Node prev;
+        Node next;
+        public Node()
+        { }
+        public Node(int info)
+        {
+            this.info = info;
+        }
+        public Node(int info, Node prev, Node next)
+        {
+            this.info = info;
+            this.prev = prev;
+            this.next = next;
+        }
+        public int Info
+        {
+            get
+            {
+                return info;
+            }
+            set
+            {
+                info = value;
+            }
+        }
+        public Node Prev
+        {
+            get
+            {
+                return prev;
+            }
+            set
+            {
+                prev = value;
+            }
+        }
+        public Node Next
+        {
+            get
+            {
+                return next;
+            }
+            set
+            {
+                next = value;
+            }
+        }
+        
+        //public bool isHead{
+        	
+        //}
+        	
+        
+        public object Clone(List list)
 		{
-		}
-		
-		public Node(int info)
-		{
-			Info = info;
-		}
+        	 
+						
+			Node p = this.Next;
+			
+			Node first;
+			Node last;
+			Node prev;
+			Node c;
+			
+			first = new Node(this.Info,null,null);
 
-		
-		public Node(Node prev, Node next, int info)
-		{
-			Prev = prev;
-			Next = next;
-			Info = info;
+			last = first.Next;
+			//prelast = first;
+			
+			
+			prev = first;
+			c=null;
+			
+			while (p!=list.Head){
+				c.Prev.Next = c = new Node(p.Info,last,null);
+				c.Prev = prev;
+				prev=c;
+				p = p.Next;
+			}
+			
+			return first;
+
 		}
-	}
+    }
 }
