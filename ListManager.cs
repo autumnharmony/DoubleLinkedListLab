@@ -109,9 +109,9 @@ namespace DoubleLinkedListLab
 					}
 					
 					else {
-						//Debug.WriteLine("встретилась "+p.Info+"ложная тревога, переходим в "+F1.Link.Info);
+						Debug.WriteLine("встретилась "+p+"ложная тревога, переходим в "+F1.Next);
 						prep = F1;
-						//p = F1.Link;
+						p = F1.Next;
 					}
 					
 					#endregion
@@ -203,8 +203,8 @@ namespace DoubleLinkedListLab
 					}
 					
 					else {
-						//prep = p;
-						//p = p.Link;
+						prep = p;
+						p = p.Next;
 						
 					}
 					
