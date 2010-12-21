@@ -248,7 +248,7 @@ namespace DoubleLinkedListLab
 		{
 			string s = "";
 			foreach(Node n in this){
-				if (n!=null)
+				if (n!=null && n!=Head)
 				s+=n.Info+"->";
 				else break;
 			}

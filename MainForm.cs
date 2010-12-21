@@ -93,11 +93,11 @@ namespace DoubleLinkedListLab
 			List clone = (List)sl3.Clone(true);
 			Debug.WriteLine(clone+"");
 			
-			//sl1 = ListManager.Replace(sl1,sl2,sl3);
+			sl1 = ListManager.Replace(sl1,sl2,sl3);
 			
 			
 			ouput.Text += "\r\n";
-			//ouput.Text += sl1.ToString();
+			ouput.Text += sl1.ToString();
 			
 			
 			//rl.SetList(sl1);

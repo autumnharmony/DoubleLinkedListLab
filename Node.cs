@@ -88,5 +88,10 @@ namespace DoubleLinkedListLab
 			return first;
 
 		}
+        
+		public override string ToString()
+		{
+			return this.Info+"";
+		}
     }
 }

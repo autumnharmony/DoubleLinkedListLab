@@ -30,7 +30,7 @@ namespace DoubleLinkedListLab
 			Debug.WriteLine(L1);
 			Debug.WriteLine(L2);
 			Debug.WriteLine(L3);
-			throw new NotImplementedException();
+			//throw new NotImplementedException();
 			
 			Node F1 = L1.Head.Next;
 			Node F2 = L2.Head.Next;
@@ -40,7 +40,7 @@ namespace DoubleLinkedListLab
 			List l2 = L2;
 			List l3 = L3;
 
-			if (F1!=null && F2!=null && F3!=null){
+			if (!L1.isEmpty && !L2.isEmpty && !L3.isEmpty){
 				
 				Node p = F1;
 				Node pp = null;
@@ -63,7 +63,7 @@ namespace DoubleLinkedListLab
 					
 					matched = false;
 					
-					while (pp!=null && p!=null){
+					while (pp!=L2.Head && p!=L1.Head){
 						
 						matched = true;
 						
@@ -84,12 +84,24 @@ namespace DoubleLinkedListLab
 
 						// нашли вхождение
 						Debug.WriteLine("и правда, есть вхождение в начале, меняем");
-						q = (Node)F3.Clone(L3);
-						F1 = q;
-						while (q.Next!=null){
+						
+						//q = (Node)F3.Clone(L3);
+						List newlist = L3.Clone(true);
+						
+						Debug.WriteLine("клонирован список "+newlist);
+						
+						q = newlist.Head.Next;
+						q.Prev = L1.Head.Prev;
+						//F1 = q;
+						L1.Head.Next = q;
+						
+						
+						
+						while (q.Next!=newlist.Head){
 							q=q.Next;
 						}
 						q.Next = p;
+						p.Prev = q;
 						
 						prep = q;
 						//p = q.Link;
@@ -104,6 +116,7 @@ namespace DoubleLinkedListLab
 					
 					#endregion
 				}
+			
 				
 				
 				#region середина и конец
@@ -116,7 +129,7 @@ namespace DoubleLinkedListLab
 						Debug.WriteLine("преположительно вхождение");
 						Debug.WriteLine(p+"");
 						// запомнили начало
-						//CyclicList s = p;
+						Node s = p;
 						
 						pp = F2;
 						
@@ -138,8 +151,9 @@ namespace DoubleLinkedListLab
 								matched = true;
 								//else {
 								//	matched = true;
-								//pp = pp.Link;
-								//p = p.Link;
+								pp = pp.Next;
+								p = p.Next;
+								
 								if (pp == L2.Head && matched){
 									matched = true;
 									break;
@@ -157,26 +171,34 @@ namespace DoubleLinkedListLab
 							Debug.WriteLine("и правда, меняем");
 							
 							//q = (CyclicList)F3.Clone();
+							List newlist = L3.Clone(true);
+						
+							q = newlist.Head.Next;
+							q.Prev = s.Prev;
+							
+							
 							
 							prep.Next = q;
+							q = newlist.Head.Next;
 							
-							while (q.Next!=L2.Head){
-								//q=q.Link;
-							//}
+							while (q.Next!=newlist.Head){
+								q=q.Next;
+							}
 							
-							//q.Link = p;
+							q.Next = p;
+							p.Prev = q;
 							//prep.Link = q;
 							prep = q;
 							//p = p.Link;
 							
 							Debug.WriteLine("prep = "+prep + " p = "+p);
-							}
+						
 						}
 						
 						else {
 							
-							//prep = s;
-							//p = s.Link;
+							prep = s;
+							p = s.Next;
 						}
 					}
 					
@@ -192,8 +214,8 @@ namespace DoubleLinkedListLab
 				
 				
 			}
-			
-			//return F1;
+			Debug.WriteLine("возвращается список "+L1);
+			return L1;
 			
 		}
 		
