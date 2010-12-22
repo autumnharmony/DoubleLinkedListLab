@@ -55,10 +55,6 @@ namespace DoubleLinkedListLab
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.label11 = new System.Windows.Forms.Label();
-			//this.rl = new LinkedListLab.ListView();
-			//this.listView1 = new LinkedListLab.ListView();
-			//this.listView2 = new LinkedListLab.ListView();
-			//this.listView3 = new LinkedListLab.ListView();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
@@ -73,10 +69,9 @@ namespace DoubleLinkedListLab
 			// ouput
 			// 
 			this.ouput.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.ouput.Location = new System.Drawing.Point(212, 6);
-			this.ouput.Multiline = true;
+			this.ouput.Location = new System.Drawing.Point(212, 40);
 			this.ouput.Name = "ouput";
-			this.ouput.Size = new System.Drawing.Size(170, 100);
+			this.ouput.Size = new System.Drawing.Size(248, 20);
 			this.ouput.TabIndex = 0;
 			// 
 			// button1
@@ -234,10 +229,6 @@ namespace DoubleLinkedListLab
 			// tabPage2
 			// 
 			this.tabPage2.Controls.Add(this.label11);
-			//this.tabPage2.Controls.Add(this.rl);
-			//this.tabPage2.Controls.Add(this.listView1);
-			//this.tabPage2.Controls.Add(this.listView2);
-			//this.tabPage2.Controls.Add(this.listView3);
 			this.tabPage2.Controls.Add(this.label6);
 			this.tabPage2.Controls.Add(this.label5);
 			this.tabPage2.Controls.Add(this.label4);
@@ -257,41 +248,6 @@ namespace DoubleLinkedListLab
 			this.label11.Size = new System.Drawing.Size(85, 13);
 			this.label11.TabIndex = 23;
 			this.label11.Text = "результат";
-			// 
-			// rl
-			// 
-			//this.rl.AutoSize = true;
-			//this.rl.Location = new System.Drawing.Point(392, 24);
-			//this.rl.Name = "rl";
-			//this.rl.Size = new System.Drawing.Size(85, 128);
-			//this.rl.TabIndex = 22;
-			// 
-			// listView1
-			// 
-			//this.listView1.AutoSize = true;
-			//this.listView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			//this.listView1.Location = new System.Drawing.Point(52, 24);
-			//this.listView1.Name = "listView1";
-			//this.listView1.Size = new System.Drawing.Size(85, 128);
-			//this.listView1.TabIndex = 13;
-			// 
-			// listView2
-			// 
-			//this.listView2.AutoSize = true;
-			//this.listView2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			//this.listView2.Location = new System.Drawing.Point(168, 24);
-			//this.listView2.Name = "listView2";
-			//this.listView2.Size = new System.Drawing.Size(85, 128);
-			//this.listView2.TabIndex = 14;
-			// 
-			// listView3
-			// 
-			//this.listView3.AutoSize = true;
-			//this.listView3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			//this.listView3.Location = new System.Drawing.Point(284, 24);
-			//this.listView3.Name = "listView3";
-			//this.listView3.Size = new System.Drawing.Size(85, 128);
-			//this.listView3.TabIndex = 15;
 			// 
 			// label6
 			// 
@@ -358,7 +314,7 @@ namespace DoubleLinkedListLab
 		}
 		private System.Windows.Forms.Label label11;
 		public System.Windows.Forms.TextBox log;
-		//private DoubleLinkedListLab.ListView rl;
+		private DoubleLinkedListLab.ListView rl;
 		private System.Windows.Forms.TabPage tabPage2;
 		private System.Windows.Forms.TabPage tabPage1;
 		private System.Windows.Forms.TabControl tabControl1;
@@ -376,9 +332,9 @@ namespace DoubleLinkedListLab
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label4;
-		//private DoubleLinkedListLab.ListView listView3;
-		//private DoubleLinkedListLab.ListView listView2;
-		//private DoubleLinkedListLab.ListView listView1;
+		private DoubleLinkedListLab.ListView listView3;
+		private DoubleLinkedListLab.ListView listView2;
+		private DoubleLinkedListLab.ListView listView1;
 		private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.Button button1;

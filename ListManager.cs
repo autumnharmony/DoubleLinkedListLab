@@ -27,11 +27,11 @@ namespace DoubleLinkedListLab
 		/// 10, 20, 4, 5, 10, 20, 6.
 		/// </summary>
 		public static  List Replace(List L1, List L2, List L3){
+			
 			Debug.WriteLine(L1);
 			Debug.WriteLine(L2);
 			Debug.WriteLine(L3);
-			//throw new NotImplementedException();
-			
+						
 			Node F1 = L1.Head.Next;
 			Node F2 = L2.Head.Next;
 			Node F3 = L3.Head.Next;
@@ -94,8 +94,6 @@ namespace DoubleLinkedListLab
 						q.Prev = L1.Head.Prev;
 						//F1 = q;
 						L1.Head.Next = q;
-						
-						
 						
 						while (q.Next!=newlist.Head){
 							q=q.Next;

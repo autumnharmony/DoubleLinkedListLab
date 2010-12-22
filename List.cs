@@ -19,45 +19,7 @@ namespace DoubleLinkedListLab
         	}
         }
         
-        public void InsertAfter(Node pointer, Node newNode)
-        {
-            if (pointer != null && head != null && newNode != null)
-            {
-                newNode.Next = pointer.Next;
-                newNode.Prev = pointer;
-                pointer.Next.Prev = newNode;
-                pointer.Next = newNode;
-            }
-        }
-        public void InsertAfter(Node pointer, int value)
-        {
-            if (pointer != null && head != null && value != null)
-            {
-                Node newNode = new Node(value, pointer, pointer.Next);
-                pointer.Next.Prev = newNode;
-                pointer.Next = newNode;
-            }
-        }
-        public void InsertBefore(Node pointer, int value)
-        {
-            if (pointer != null && head != null && value != null)
-            {
-                Node node = new Node(value, pointer.Prev, pointer);
-                pointer.Prev.Next = node;
-                pointer.Prev = node;
-            }
-        }
-        public void InsertBefore(Node pointer, Node newNode)
-        {
-            if (pointer != null && head != null && newNode != null)
-            {
-                newNode.Prev = pointer.Prev;
-                newNode.Next = pointer;
-                pointer.Prev.Next = newNode;
-                pointer.Prev = newNode;
-            }
-        }
-        
+
         public void Add(Node pointer){
         	Node q = Head.Next;
         	while (q!=Head){
@@ -69,12 +31,12 @@ namespace DoubleLinkedListLab
         }
         
         public void Add(int value){
-        	Node q = Head.Next;
-        	while (q!=Head){
-        		q=q.Next;
-        	}
-        	q.Next = new Node(value);
-        	q.Next.Prev = q;
+        	
+        	Node q = new Node(value,Head.Prev,Head);
+        	Head.Prev = q;
+        	
+        	if (Head.Next = null) Head.Next =q;
+        	
         }
         	
         public void Create(int[] values)
@@ -217,39 +179,15 @@ namespace DoubleLinkedListLab
                 fnode.Prev.Next = fnode.Next;
             }
         }
-        public void RemoveWhere(int value)
-        {
-            Node node = head.Next;
-            while (node != head)
-            {
-                if (node.Info.Equals(value))
-                {
-                    node.Prev.Next = node.Next;
-                    node.Next.Prev = node.Prev;
-                }
-                node = node.Next;
-            }
-        }
-        public void RemoveAllNodesWithValue(int value)
-        {
-            Node node = head.Next;
-            while (node != head)
-            {
-                if (node.Info.Equals(value))
-                {
-                    node.Next.Prev = node.Prev;
-                    node.Prev.Next = node.Next;
-                }
-                node = node.Next;
-            }
-        }
+        
+        
         
 		public override string ToString()
 		{
 			string s = "";
 			foreach(Node n in this){
 				if (n!=null && n!=Head)
-				s+=n.Info+"->";
+				s+=n.Info+" ";
 				else break;
 			}
 			

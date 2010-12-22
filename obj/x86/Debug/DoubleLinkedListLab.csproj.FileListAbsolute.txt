@@ -6,3 +6,5 @@ D:\Documents and Settings\anton\DoubleLinkedListLab\obj\x86\Debug\DoubleLinkedLi
 D:\Documents and Settings\anton\DoubleLinkedListLab\obj\x86\Debug\LinkedListLab.CreateListDialog.resources
 D:\Documents and Settings\anton\DoubleLinkedListLab\obj\x86\Debug\DoubleLinkedListLab.csproj.GenerateResource.Cache
 D:\Documents and Settings\anton\DoubleLinkedListLab\obj\x86\Debug\DoubleLinkedListLab.MainForm.resources
+D:\Documents and Settings\anton\DoubleLinkedListLab\obj\x86\Debug\LinkedListLab.ListView.resources
+D:\Documents and Settings\anton\DoubleLinkedListLab\obj\x86\Debug\DoubleLinkedListLab.ListView.resources

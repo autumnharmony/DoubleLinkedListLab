@@ -96,7 +96,7 @@ namespace DoubleLinkedListLab
 			sl1 = ListManager.Replace(sl1,sl2,sl3);
 			
 			
-			ouput.Text += "\r\n";
+			//ouput.Text += "\r\n";
 			ouput.Text += sl1.ToString();
 			
 			

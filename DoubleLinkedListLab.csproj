@@ -52,6 +52,10 @@
       <DependentUpon>CreateListDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="List.cs" />
+    <Compile Include="ListView.cs" />
+    <Compile Include="ListView.Designer.cs">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Node.cs" />
     <Compile Include="ListManager.cs" />
     <Compile Include="MainForm.cs" />
@@ -62,6 +66,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateListDialog.resx">
       <DependentUpon>CreateListDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListView.resx">
+      <DependentUpon>ListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
